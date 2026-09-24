@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="SecHack365・ToolUseProxyの展示デモ。秘密情報そのもの、派生した手順書、無関係な案内文の3種類で送信時の動きを比較します。">
+<link rel="icon" href="data:,">
+<title>ToolUseProxy — 展示デモ</title>
+<style>
+:root{color-scheme:light dark;--bg:#f5f3ed;--fg:#242625;--muted:#626762;--rule:#c6c9c0;--accent:#184d42}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.8 system-ui,-apple-system,sans-serif}main{max-width:860px;margin:auto;padding:52px 32px 40px}header{display:flex;justify-content:space-between;gap:20px;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:16px}header strong{font-size:23px;letter-spacing:-.7px}header span{font-size:15px;color:var(--muted)}h1{font-size:clamp(27px,4.5vw,40px);line-height:1.5;font-weight:600;margin:40px 0 16px}p{margin:12px 0 26px}a{color:var(--accent);text-underline-offset:5px}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}.watch{display:inline-block;padding:12px 28px;background:var(--accent);color:white;text-decoration:none;border-radius:5px;font-weight:600}.note{font-size:15px;color:var(--muted)}section{margin-top:40px}h2{font-size:23px;font-weight:600;margin:0 0 6px}ol{padding-left:24px;margin-top:20px}li{padding:14px 0;border-bottom:1px solid var(--rule)}li a{display:flex;justify-content:space-between;gap:12px;text-decoration:none}li a:hover{text-decoration:underline}li span{white-space:nowrap;font-size:16px;color:var(--muted)}footer{margin-top:36px;font-size:15px;color:var(--muted)}
+@media(prefers-color-scheme:dark){:root{--bg:#191d1c;--fg:#eeeee8;--muted:#acb5af;--rule:#45514a;--accent:#a4d5bd}.watch{color:#162d25}}
+@media(max-width:550px){main{padding:25px 22px}header{display:block}header span{display:block}li a{display:block}li span{display:block}}
+</style>
+</head>
+<body><main>
+<header><strong>ToolUseProxy</strong><span>SecHack365 / 融合駆動コース · 中川 誠星</span></header>
+<h1>AIに任せる作業にも、<br>外へ出したくない情報がある。</h1>
+<p>秘密のメモ、それをもとに作った手順書、無関係な案内文。<br>3種類のファイルをGitHubに送ろうとすると、どうなるでしょうか。</p>
+<a class="watch" href="screening.html">デモ動画を上映する</a>
+<p class="note">無音・ループ再生。画面右上から全画面表示できます。再生が始まらない場合は、動画の再生ボタンを押してください。</p>
+<section aria-labelledby="logs-title"><h2 id="logs-title">実験の記録を見てみる</h2>
+<p>動画で行った3回の送信を、入力・出力や判定結果から確認できます。ログ画面の「グラフ」では、保存時点の依存関係を見られます。</p>
+<ol>
+<li><a href="logs.html?case=original">秘密のメモをそのまま送信<span>実行前にブロック</span></a></li>
+<li><a href="logs.html?case=derived">メモをもとに作った手順書を送信<span>実行前にブロック</span></a></li>
+<li><a href="logs.html?case=unrelated">メモと無関係な受付案内を送信<span>送信を実行</span></a></li>
+</ol>
+<p class="note">2026年9月24日のデモの保存版です。秘密のメモは実験用の架空データです。公開ログでは内部メモの参照内容やPC固有の情報を省略しています。リアルタイムの監視画面ではありません。</p>
+</section>
+<footer><a href="https://github.com/mani1261790/ToolUseProxy">仕組み・導入方法をGitHubで読む</a></footer>
+</main></body></html>
